@@ -1,0 +1,18 @@
+
+  <div class="card" style="width: 100%; height: 342px; ">
+   
+    <div class="card-body">
+
+      <h5 class="card-title">{{diary.title}}</h5>
+      <img style="height: 190px;" class="card-img-top" [src]="getImgUrl(diary)" alt="Card image cap">
+      <div class="d-flex justify-content-between mt-2">
+        <p class="card-text">{{diary.dateTime | date:'short'}}</p>
+        <span *ngIf="diary.status == 0" class="border status-new ">NEW</span>
+        <span *ngIf="diary.status == 1" class="border status-Recent">RECENT</span>
+        <span *ngIf="diary.status == 2" class="border status-overdue">OVERDUE</span>
+      </div>
+      <button  class="btn btn-danger"(click)="deleteEntry(diary.id)">Delete</button>
+    </div>
+  </div>
+
+  

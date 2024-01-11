@@ -1,0 +1,33 @@
+<div mat-dialog-content>
+
+  <form [formGroup]="myForm">
+
+    <div class="p-field p-col-12 p-md-4">
+      <span class="p-float-label">
+        <input style="width:100%" type="text" id="Title" pInputText formControlName="Title">
+        <label for="Title">Title</label>
+      </span>
+    </div>
+
+    <div class="p-field p-col-12 p-md-4">
+      <span class="p-float-label">
+        <!-- <p-calendar style="width:100%" inputId="dateTime" formControlName="dateTime" [showTime]="true" hourFormat="12"></p-calendar> -->
+        <input style="width:100%" type="datetime-local" id="dateTime" placeholder="oo" pInputText
+          formControlName="dateTime">
+        <label for="dateTime">Date</label>
+      </span>
+    </div>
+
+  </form>
+
+  <diV>
+    <p-fileUpload name="file" url="http://localhost:5041/api/Diary/upload/37" (onBeforeUpload)="before($event)"
+      [customUpload]="true" [showUploadButton]="false" [multiple]="false" [showCancelButton]="false"
+      (onSelect)="onSelectImg($event)" accept="image/*" [maxFileSize]="1000000">
+    </p-fileUpload>
+  </diV>
+
+</div>
+<div mat-dialog-actions>
+  <button pButton pRipple label="Save" icon="pi pi-check" (click)="save()"></button>
+</div>

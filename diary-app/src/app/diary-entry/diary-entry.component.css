@@ -1,0 +1,22 @@
+
+.status-new {
+    background: #c8e6c9 !important;
+    color: #256029 !important;
+}
+
+.status-Recent {
+    background: #feedaf !important;
+    color: #8a5340 !important;     
+}
+
+
+.status-overdue {
+    background: #ffcdd2 !important;
+    color: #c63737 !important;
+}
+
+.border{
+    padding: 5px;
+    height: fit-content;
+    border-radius: 9px;
+}
